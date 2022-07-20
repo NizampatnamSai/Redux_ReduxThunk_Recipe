@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 
 const TodoDatas = ({data}) => {
   let {id}=data;
+  console.log(data.input)
     let [dis,setDis]=useState(false)
     let [inpdis,setinpdis]=useState(false)
     let [upinp,setUpinp]=useState(`${data.input}`)
@@ -59,7 +60,7 @@ let handledelete=()=>[
 
 
 let handleupdate=()=>{
-  setinpdis(true)
+  setinpdis(!inpdis)
 
 }
 
@@ -83,16 +84,16 @@ let handleUpdateRedux=()=>{
                     <button onClick={handleclick}>:</button>
                 </ul>
                 )})} */}
-
+{ data?.input &&  
             <div className='TodoDatas_inside'>
                 <div>  <p>{data?.input}</p></div>
                 {inpdis && dis &&
                 <input value={upinp}  onChange={handleChangeup}/> 
                 }
-
+{inpdis &&dis && <button className='Tododatas_btnupdate'  onClick={handleUpdateRedux}>Update</button>}
                 
                 <div><button className='TodoDatas_inside_btn' onBlur={handlenoclk} onClick={handleclick}> :</button></div> </div> 
-
+}
 
                 {dis?<div className='TodoData_btn_inside'> <button className='TodoDatas_recipebtn' onClick={handleSearch}>
                     <Link to={`${data?.input}`} > Search {data?.input} Reciepe </Link>
@@ -104,8 +105,7 @@ let handleUpdateRedux=()=>{
                       
                       <button className='TodoDatas_recipeUpdate'  
                      onClick={handleupdate} >Update</button>
-                     {inpdis && <button className='Tododatas_btnupdate'
-                     onClick={handleUpdateRedux}>Update</button>}
+                     
                     </div> :null}
   
 {/* {selectrecipe? <div>
@@ -121,7 +121,7 @@ let handleUpdateRedux=()=>{
             })}
           </div>:null} */}
         
-  
+        
     </div>
   )
 }

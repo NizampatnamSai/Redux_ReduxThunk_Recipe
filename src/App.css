@@ -92,3 +92,29 @@
     /* border-radius: 15px; */
   }
   
+
+  .Check {
+    background-color: salmon;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn_Parent div:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn_Parent {
+    position: relative;
+  }
+
+  .btn_Parent div:nth-child(2) {
+   position: absolute;
+   top: 0px;
+   right: 45px;
+   
+   display: flex;
+   flex-direction: column;
+  
+  }
