@@ -17,7 +17,7 @@ let Input=()=>{
     let handlesubmit=(e)=>{
         
    e.preventDefault()
-    console.log(input)
+    // console.log(input)
     if(input!=='' && input!==undefined && input!==null){
         setid(id+1)
    dispatch(recipeadd({input,id}))}
@@ -27,7 +27,7 @@ setInput('')
     }
 
     
-    console.log(input)
+    // console.log(input)
     return(
         <div className='Input'>
          <div className='Input_Inside'>

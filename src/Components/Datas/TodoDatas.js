@@ -14,7 +14,7 @@ const TodoDatas = ({data}) => {
 
     let dispatch=useDispatch()
     let selectrecipe=useSelector(selectThunkRcipe)
-    console.log(selectrecipe?.hits)
+    // console.log(selectrecipe?.hits)
 
     let handleclick=()=>{
         // alert(`u clicken on ${data}!`)
@@ -34,7 +34,7 @@ const TodoDatas = ({data}) => {
 
     let handleSearch=()=>{
         // alert(`search ${data} `)
-          console.log(data)
+          // console.log(data)
           dispatch(
             getrecipe(data?.input)
           )

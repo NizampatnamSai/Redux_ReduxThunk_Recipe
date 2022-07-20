@@ -21,8 +21,8 @@ function App() {
 
 
 
-console.log(window.location.href)
-console.log(window.location.pathname)
+// console.log(window.location.href)
+// console.log(window.location.pathname)
 let path=window.location.pathname;
 let SelectNameRespi=useSelector(SelectName)
 const navigate = useNavigate()
@@ -32,7 +32,8 @@ useEffect(()=>{
   if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
  SelectNameRespi!=='icecream' && SelectNameRespi!=='Chilli' && SelectNameRespi!=='chilli'
  && SelectNameRespi!=='Chilli chicken' && SelectNameRespi!=='chilli chicken'
-  && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
+  && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' &&
+  SelectNameRespi!=='Gee' && SelectNameRespi!=='gee' && SelectNameRespi!=='ice'){
   alert('Oops!! go back & search with proper name or Update it')
   navigate("/")
 
@@ -96,7 +97,9 @@ useEffect(()=>{
       <Route path='/Chicken' element={<RecipesChild/>}/>
       <Route path='/Ice' element={<RecipesChild/>}/>
       <Route path='/Chilli' element={<RecipesChild/>}/>
-      <Route path='/ChilliChicken' element={<RecipesChild/>}/>
+      <Route path='/Chilli%20Chicken' element={<RecipesChild/>}/>
+      <Route path='/chilli%20chicken' element={<RecipesChild/>}/>
+      <Route path='/gee' element={<RecipesChild/>}/>
 
 
       {/* <Route path='/ice' element={<RecipesChild/>}/> */}

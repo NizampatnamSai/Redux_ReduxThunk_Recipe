@@ -30,7 +30,7 @@
 .TodoDatas_recipebtn {
     position: relative;
     bottom: 50px;
-    left: 340px;
+    left: 280px;
     margin-bottom: 2px;
     border-radius: 5px;
 }
@@ -39,7 +39,7 @@
 .TodoDatas_recipedelete {
     position: relative;
     bottom: 50px;
-    left: 340px;
+    left: 280px;
     
     border-radius: 5px;
     color: lightcoral;
@@ -48,7 +48,7 @@
 .TodoDatas_recipeUpdate {
     position: relative;
     /* bottom: 50px; */
-    left: 340px;
+    left: 280px;
     bottom: 50px;
 
     /* background-color: red; */
@@ -214,8 +214,8 @@ font-size: 15px;
 
 .Tododatas_btnupdate {
     position: relative;
-    bottom: 100px;
-    left: 250px;
+    bottom: 70px;
+    left: 150px;
     width: fit-content;
     border-radius: 5px;
     padding-top: 3px;
