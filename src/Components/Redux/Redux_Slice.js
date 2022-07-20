@@ -34,7 +34,7 @@ export const RecipeSlice=createSlice({
         
       let nr=  r.filter((val,inx)=>{
             
-            return val!==action.payload
+            return val?.id!==action.payload
         })
 
         state.data=nr;

@@ -33,11 +33,11 @@ const TodoDatas = ({data}) => {
         // alert(`search ${data} `)
           console.log(data)
           dispatch(
-            getrecipe(data)
+            getrecipe(data?.input)
           )
           setDis(false)
           dispatch(namesadd(
-            data
+            data?.input
           ))
         
     }
@@ -53,7 +53,7 @@ const TodoDatas = ({data}) => {
 let handledelete=()=>[
     // alert(`Are tou sure to delete ${data}`),
     dispatch(
-        recidelete(data)
+        recidelete(data?.id)
     )
 ]
 
@@ -72,15 +72,15 @@ let handledelete=()=>[
                 )})} */}
 
             <div className='TodoDatas_inside'>
-                <div>  <p>{data}</p></div>
+                <div>  <p>{data?.input}</p></div>
                 <div><button className='TodoDatas_inside_btn' onBlur={handlenoclk} onClick={handleclick}> :</button></div> </div> 
 
 
                 {dis?<div className='TodoData_btn_inside'> <button className='TodoDatas_recipebtn' onClick={handleSearch}>
-                    <Link to={`${data}`} > Search {data} Reciepe </Link>
+                    <Link to={`${data?.input}`} > Search {data?.input} Reciepe </Link>
                      </button>
                      <button  onClick={handledelete}
-                      className='TodoDatas_recipedelete'>Delete {data}</button>
+                      className='TodoDatas_recipedelete'>Delete {data?.input}</button>
                     </div> :null}
   
                 

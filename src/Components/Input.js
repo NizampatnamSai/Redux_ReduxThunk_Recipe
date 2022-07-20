@@ -8,19 +8,19 @@ let Input=()=>{
 
     let dispatch=useDispatch()
     let [input,setInput]=useState('')
-    let val=0;
-    let id;
+     let [id,setid]=useState(0)
 
     let inputOnchange=(e)=>{
         setInput(e.target.value)
 
     }
     let handlesubmit=(e)=>{
+        
    e.preventDefault()
     console.log(input)
     if(input!=='' && input!==undefined && input!==null){
-        id=++val;
-   dispatch(recipeadd(input))}
+        setid(id+1)
+   dispatch(recipeadd({input,id}))}
 //    input=''
 setInput('')
 
