@@ -1,0 +1,38 @@
+.Input {
+    background-color: white;
+    min-height: 450px;
+    min-width: 450px;
+    /* height: fit-content !important; */
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.Input_form {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.Input_form input {
+ height: 25px;
+ padding-left: 10px;
+ outline: none;
+ border: none;
+}
+
+.Input_form button {
+    width: 65px;
+    background-color: #c60001;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+.Input_form button:hover {
+ cursor: pointer;
+}

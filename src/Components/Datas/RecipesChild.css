@@ -1,0 +1,87 @@
+.recipes_inside {
+    display: flex;
+    background-color: rgb(176, 107, 246);
+    width: 70%;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    padding: 20px;
+     /* height: 250px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.recipes_inside img {
+    width: 150px;
+    border-radius: 15px;
+}
+
+.recipes_inside h1 {
+    color: white;
+font-size: 15px;
+display: flex;
+justify-content: center;
+/* height: 150px; */
+align-self: center;
+/* width: 200px; */
+/* align-items: center; */
+}
+
+.TodoDatas a{
+    text-decoration: none;
+}
+
+.RecipesChild {
+    background-color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid lightgray;
+    /* margin-top: 2000px; */
+    margin-top: 25px;
+     box-shadow: 0px 0px 2px 2px rgba(0,0, 0,0.2);
+     min-height: 55px;
+     border-radius: 25px;
+}
+
+.RecipesChild button:nth-child(1){
+    background-color: red;
+    border:  none;
+    position: relative;
+    /* right: 10px; */
+    color: white;
+    height: 25px;
+    /* width: 50px; */
+    left: 5px;
+    border-radius:5px ;
+    margin-top: 5px;
+}
+
+.RecipesChild button:hover{
+
+cursor: pointer;
+}
+
+.RecipesChild button:nth-child(2){
+
+    background-color: black;
+    color: white;
+
+
+
+}
+
+.RecipesChild_btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+
+
+
+.recipes_inside_name {
+    align-self: center;
+}

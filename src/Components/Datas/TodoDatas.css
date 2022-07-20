@@ -1,0 +1,91 @@
+.TodoDatas_inside {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    /* width: 100%; */
+}
+
+.TodoDatas_inside button{
+    height: 25px;
+    align-self: center;
+    font-size: large;
+    border-radius: 15px;
+}
+
+.TodoDatas_inside button:hover{
+    cursor: pointer;
+}
+
+
+
+
+.TodoData_btn_inside {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 3px;
+}
+
+.TodoDatas_recipebtn {
+    position: relative;
+    bottom: 50px;
+    left: 220px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+}
+
+
+.TodoDatas_recipedelete {
+    position: relative;
+    bottom: 50px;
+    left: 220px;
+    border-radius: 5px;
+    color: lightcoral;
+
+}
+
+.TodoDatas_recipedelete:hover {
+    cursor: pointer;
+}
+
+.TodoDatas >button{
+
+    border-radius: 5px;
+
+}
+
+
+.TodoDatas >button:hover{
+    /* background-color: red; */
+    cursor: pointer;
+}
+
+.recipes_inside {
+    display: flex;
+    background-color: rebeccapurple;
+    width: 75%;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.recipes_inside img {
+    width: 150px;
+}
+
+.recipes_inside h1 {
+font-size: 15px;
+}
+
+.TodoDatas a{
+    text-decoration: none;
+}
+
+.TodoDatas_inside div:nth-child(2){
+    /* color: red; */
+    align-self: center;
+}
+
+/* .TodoDatas_recipebtn */

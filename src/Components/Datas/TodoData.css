@@ -1,0 +1,25 @@
+
+.todoData {
+}
+
+.todoData_ul {
+    background-color: salmon;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+}
+
+.todoData_ul li {
+   list-style:none;
+   width: 100%;
+}
+
+.todoData_ul button {
+
+    /* background-color: white; */
+  /* color: white; */
+  border: none;
+  /* padding-right: 10px; */
+  margin-right: 10px;
+}
