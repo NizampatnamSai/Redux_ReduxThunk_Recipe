@@ -25,11 +25,15 @@ console.log(window.location.href)
 console.log(window.location.pathname)
 let path=window.location.pathname;
 let SelectNameRespi=useSelector(SelectName)
+const navigate = useNavigate()
+
  
 useEffect(()=>{
   if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
  SelectNameRespi!=='icecream' && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
   alert('Oops!! go back & search with proper name')
+  navigate("/")
+
 }
 
 
@@ -68,7 +72,7 @@ useEffect(()=>{
 
   return (
     <div className={ SelectNameRespi ?'':'App' }>
-      <Router>
+      
       {/* <Input/> */}
       <Routes>
       <Route path='/' element={<Input/>}/>
@@ -82,7 +86,7 @@ useEffect(()=>{
       {/* <Route path='/Chicken' element={<RecipesChild/>}/> */}
 
     </Routes>
-    </Router>
+   
     </div>
 
   );
