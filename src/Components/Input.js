@@ -32,7 +32,7 @@ setInput('')
         <div className='Input'>
          <div className='Input_Inside'>
         <form className='Input_form'>
-            <input value={input} onChange={inputOnchange} placeholder='write here...'  required/>
+            <input value={input} onChange={inputOnchange} placeholder='write Recipe names here...'  required/>
            {input?<button onClick={handlesubmit}>Add</button> : null} 
         </form>
          </div>

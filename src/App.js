@@ -33,7 +33,7 @@ useEffect(()=>{
  SelectNameRespi!=='icecream' && SelectNameRespi!=='Chilli' && SelectNameRespi!=='chilli'
  && SelectNameRespi!=='Chilli chicken' && SelectNameRespi!=='chilli chicken'
   && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
-  alert('Oops!! go back & search with proper name')
+  alert('Oops!! go back & search with proper name or Update it')
   navigate("/")
 
 }

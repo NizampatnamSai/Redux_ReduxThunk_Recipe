@@ -224,3 +224,8 @@ font-size: 15px;
     background-color: red;
     color: white;
 }
+
+.Tododatas_btnupdate:hover {
+
+cursor: pointer;
+}
