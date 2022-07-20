@@ -40,6 +40,8 @@ const TodoDatas = ({data}) => {
             getrecipe(data?.input)
           )
           setDis(false)
+  setinpdis(!inpdis)
+          
           dispatch(namesadd(
             data?.input
           ))
@@ -76,52 +78,33 @@ let handleUpdateRedux=()=>{
  
 
     <div className='TodoDatas'>
-        {/* { data?.map((item)=>{return(
+ 
+  
 
         
-      <ul key={Math.random()} className='todoData_ul'>
-                    <li>{item}</li>
-                    <button onClick={handleclick}>:</button>
-                </ul>
-                )})} */}
-{ data?.input &&  
-            <div className='TodoDatas_inside'>
-                <div>  <p>{data?.input}</p></div>
-                {inpdis && dis &&
+
+
+        <div className='tododatas'>
+          <div className='tododatas_inside'>
+           <div className='tododatas_main'>
+            <div><p>{data?.input}</p></div>
+            <div><button className='tododatas_main_btn' onBlur={handlenoclk} onClick={handleclick}> :</button></div>
+           </div>
+          {dis && <div className='tododatas_btns'>
+            <button onClick={handleSearch}><Link to={`${data?.input}`} > Search {data?.input} Reciepe </Link></button>
+            <button onClick={handledelete}>Delete {data?.input}</button>
+            <button onClick={handleupdate}>Update</button>
+           </div>}
+           <div className='tododatas_update'>
+           {inpdis && dis &&
                 <input value={upinp}  onChange={handleChangeup}/> 
                 }
-{inpdis &&dis && <button className='Tododatas_btnupdate'  onClick={handleUpdateRedux}>Update</button>}
-                
-                <div><button className='TodoDatas_inside_btn' onBlur={handlenoclk} onClick={handleclick}> :</button></div> </div> 
-}
-
-                {dis?<div className='TodoData_btn_inside'> <button className='TodoDatas_recipebtn' onClick={handleSearch}>
-                    <Link to={`${data?.input}`} > Search {data?.input} Reciepe </Link>
-                     </button>
-                    
-                     <button  onClick={handledelete}
-                      className='TodoDatas_recipedelete'>Delete {data?.input}</button>
-                      
-                      
-                      <button className='TodoDatas_recipeUpdate'  
-                     onClick={handleupdate} >Update</button>
-                     
-                    </div> :null}
+           
+           {inpdis &&dis && <button onClick={handleUpdateRedux}>Update</button>}
+           </div>
+          </div>
+        </div>
   
-{/* {selectrecipe? <div>
-            {selectrecipe.hits?.map((item)=>{return(
-                <div key={Math.random()} className='recipes'>
-                  <div className='recipes_inside'>
-                  <div> <h1>{item.recipe.label}</h1> </div>
-                 <div>   <img src={item.recipe.image}  alt='recipe'/></div>
-                  </div>
-                </div>
-            )
-
-            })}
-          </div>:null} */}
-        
-        
     </div>
   )
 }

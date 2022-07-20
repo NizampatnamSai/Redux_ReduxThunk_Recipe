@@ -1,8 +1,13 @@
+
+
+
+
 .TodoDatas_inside {
     display: flex;
     justify-content: space-between;
     /* background-color: red; */
     /* width: 100%; */
+    /* position: relative; */
 }
 
 .TodoDatas_inside button{
@@ -233,4 +238,115 @@ font-size: 15px;
 .Tododatas_btnupdate:hover {
 
 cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+                               /* New  */
+
+
+.tododatas_inside {
+    position: relative;
+    /* background-color: lightgreen; */
+}
+
+.tododatas_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tododatas_btns {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    top: 0px;
+    right: 19px;
+}
+
+.tododatas_update {
+    position: absolute;
+    /* left: 10px; */
+    top: 40px;
+}
+
+.tododatas_update button{
+    background-color: #f41f1f;
+    color: white;
+    border-radius: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    height: 25px;
+    /* padding: 2px; */
+    /* box-sizing: content-box; */
+}
+
+.tododatas_update input{
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 22px;
+    padding-left: 5px;
+
+}
+
+
+.tododatas_btns button{
+    margin-top: 3.5px;
+    border-radius: 5px;
+}
+
+
+.tododatas_main div:nth-child(2){
+    align-self: center;
+}
+.tododatas_main_btn {
+    border-radius: 5px;
+    font-size: large;
+    margin-top: 10px;
+    /* cursor: pointer; */
+
+}
+.tododatas_main_btn:hover {
+    cursor: pointer;
+}
+
+.tododatas_btns button:nth-child(1) {
+ color: red;
+
+}
+
+.tododatas_btns button:nth-child(2) {
+    color: rgb(252, 91, 91) !important;
+   
+   }
+
+.tododatas_btns button:nth-child(3) {
+    color: rgb(21, 230, 21);
+}
+.tododatas_btns button:nth-child(2):hover {
+cursor: pointer;
+
+}
+
+.tododatas_btns button:nth-child(3):hover {
+    cursor: pointer;
+    
+    }
+
+/* .tododatas_update  */
+
+@media (max-width:530px){
+ 
+    .tododatas_update{
+        flex-direction: column;
+    }
 }
