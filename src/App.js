@@ -29,7 +29,7 @@ let SelectNameRespi=useSelector(SelectName)
 useEffect(()=>{
   if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
  SelectNameRespi!=='icecream' && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
-  alert('oops go back & search with proper name')
+  alert('Oops!! go back & search with proper name')
 }
 
 

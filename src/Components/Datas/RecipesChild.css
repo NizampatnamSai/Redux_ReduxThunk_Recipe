@@ -1,7 +1,8 @@
 .recipes_inside {
     display: flex;
     background-color: rgb(176, 107, 246);
-    width: 70%;
+    /* width: 70%; */
+    width: 500px;
     justify-content: space-between;
     margin-bottom: 2px;
     box-sizing: border-box;
@@ -35,7 +36,7 @@ align-self: center;
 
 .RecipesChild {
     background-color: white;
-    width: 60%;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid lightgray;
@@ -86,3 +87,45 @@ cursor: pointer;
 .recipes_inside_name {
     align-self: center;
 }
+
+@media (max-width:630px){
+.RecipesChild {
+ width: 90%;
+
+}
+
+.recipes_inside {
+
+    width: 80%;
+
+}
+}
+
+@media (max-width:450px){
+    .RecipesChild {
+     width: 100%;
+    
+    }
+    
+    .recipes_inside {
+    
+        width: 90%;
+    
+    }
+    }
+
+    @media (max-width:300px){
+      
+        
+        .recipes_inside img {
+            width: 100px;
+        }
+        .recipes_inside_img{
+            /* justify-content: center; */
+             margin-left: auto;
+             margin-right: auto;
+        }
+        .recipes_inside {
+   flex-direction: column;
+        }
+        }

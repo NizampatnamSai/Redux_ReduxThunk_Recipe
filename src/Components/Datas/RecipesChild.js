@@ -48,7 +48,7 @@ const RecipesChild = () => {
                 <div key={Math.random()} className='recipes'>
                   <div className='recipes_inside'>
                   <div className='recipes_inside_name'> <h1>{item.recipe.label}</h1> </div>
-                 <div>   <img src={item.recipe.image}  alt='recipe'/></div>
+                 <div className='recipes_inside_img'>   <img src={item.recipe.image}  alt='recipe'/></div>
                   </div>
                 </div>
             )

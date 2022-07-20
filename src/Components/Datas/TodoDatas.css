@@ -29,7 +29,7 @@
 .TodoDatas_recipebtn {
     position: relative;
     bottom: 50px;
-    left: 220px;
+    left: 350px;
     margin-bottom: 2px;
     border-radius: 5px;
 }
@@ -38,11 +38,77 @@
 .TodoDatas_recipedelete {
     position: relative;
     bottom: 50px;
-    left: 220px;
+    left: 350px;
+
     border-radius: 5px;
     color: lightcoral;
 
 }
+
+
+@media (max-width:600px){
+
+.TodoDatas_recipebtn {
+    left: 145%;
+}
+
+.TodoDatas_recipedelete {
+
+    left: 145%;
+}
+
+}
+
+
+
+
+
+
+@media (max-width:500px){
+
+    .TodoDatas_recipebtn {
+        left: 80%;
+    }
+    
+    .TodoDatas_recipedelete {
+    
+        left: 80%;
+    }
+    
+    }
+  
+    
+    @media (max-width:385px){
+
+        .TodoDatas_recipebtn {
+            left: 50%;
+            
+        }
+        
+        .TodoDatas_recipedelete {
+        
+            left: 50%;
+        }
+        
+        }
+
+
+        @media (max-width:335px){
+
+            .TodoDatas_recipebtn {
+                left: 25%;
+            }
+            
+            .TodoDatas_recipedelete {
+            
+                left: 25%;
+            }
+            
+            }
+
+
+
+
 
 .TodoDatas_recipedelete:hover {
     cursor: pointer;
