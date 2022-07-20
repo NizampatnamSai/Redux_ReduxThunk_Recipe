@@ -30,7 +30,9 @@ const navigate = useNavigate()
  
 useEffect(()=>{
   if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
- SelectNameRespi!=='icecream' && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
+ SelectNameRespi!=='icecream' && SelectNameRespi!=='Chilli' && SelectNameRespi!=='chilli'
+ && SelectNameRespi!=='Chilli chicken' && SelectNameRespi!=='chilli chicken'
+  && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
   alert('Oops!! go back & search with proper name')
   navigate("/")
 
@@ -38,6 +40,11 @@ useEffect(()=>{
 
 
 },[path])
+
+
+// if('Chilli'=='Chilli'){
+//   console.log('true')
+// }
 
 // if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
 //  SelectNameRespi!=='icecream' && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
@@ -78,11 +85,15 @@ useEffect(()=>{
       <Route path='/' element={<Input/>}/>
     
       <Route path='/Icecream' element={<RecipesChild/>}/>
-      <Route path='/icecream' element={<RecipesChild/>}/>
       <Route path='/Chicken' element={<RecipesChild/>}/>
-      {/* <Route path='/chicken' element={<RecipesChild/>}/> */}
       <Route path='/Ice' element={<RecipesChild/>}/>
+      <Route path='/Chilli' element={<RecipesChild/>}/>
+      <Route path='/ChilliChicken' element={<RecipesChild/>}/>
+
+
       {/* <Route path='/ice' element={<RecipesChild/>}/> */}
+      {/* <Route path='/icecream' element={<RecipesChild/>}/> */}
+      {/* <Route path='/chicken' element={<RecipesChild/>}/> */}
       {/* <Route path='/Chicken' element={<RecipesChild/>}/> */}
 
     </Routes>
