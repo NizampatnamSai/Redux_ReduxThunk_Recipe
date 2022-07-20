@@ -22,10 +22,27 @@ const RecipesChild = () => {
     navigate("/")
 
   }
+
+
+  // let SelectNameRespi=useSelector(SelectName)
+// if(SelectNameRespi){
+//   console.log('ssreredjk')
+
+// }
+// console.log(window.location.pathname)
+// let path=window.location.pathname
+
+//   if(path!=='' && path!=='Chicken' && path!=='Icecream' &&
+//    path!=='icecream' && path!=='chicken' && path!=='Ice' && path!=='ice'){
+//     alert('oops go back & search with proper name')
+//     console.log('sdjk')
+//   }
+
+
   return (
     <div className='RecipesChild'>
        <div className='RecipesChild_btns'> <button onClick={handleeraseResipe}>Clear {SelectNameRespi}</button>
-       <button onClick={gobacknavugator}>{`<`}-- Go back</button></div>
+       <button onClick={gobacknavugator}>{`<`} Go back</button></div>
        {selectrecipe? <div>
             {selectrecipe.hits?.map((item)=>{return(
                 <div key={Math.random()} className='recipes'>

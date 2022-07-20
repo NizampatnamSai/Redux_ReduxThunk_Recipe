@@ -20,14 +20,27 @@ export const RecipeSlice=createSlice({
            
          r=[...state.data]
         //  console.log(r)
-        r.map((val,indx)=>{
-        //  console.log(val)
 
-            if(action.payload===val){
-                state.data.splice(indx,1)
-            }
+        
+        // r.map((val,indx)=>{
+        // //  console.log(val)
+
+        //     if(action.payload===val){
+        //         state.data.splice(indx,1)
+        //     }
+        // })
+
+
+        
+      let nr=  r.filter((val,inx)=>{
+            
+            return val!==action.payload
         })
+
+        state.data=nr;
         }
+
+       
         
         ,
         namesadd:(state,action)=>{

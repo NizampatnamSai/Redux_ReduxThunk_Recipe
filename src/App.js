@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux'
 import { SelectName } from './Components/Redux/Redux_Slice';
 import RecipesChild from './Components/Datas/RecipesChild';
 import Spinner from 'react-spinkit'
+import { useEffect } from 'react';
 
 function App() {
 
@@ -24,11 +25,20 @@ console.log(window.location.href)
 console.log(window.location.pathname)
 let path=window.location.pathname;
 let SelectNameRespi=useSelector(SelectName)
-
-if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
+ 
+useEffect(()=>{
+  if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
  SelectNameRespi!=='icecream' && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
   alert('oops go back & search with proper name')
 }
+
+
+},[path])
+
+// if(SelectNameRespi && SelectNameRespi!=='Chicken' && SelectNameRespi!=='Icecream' &&
+//  SelectNameRespi!=='icecream' && SelectNameRespi!=='chicken' && SelectNameRespi!=='Ice' && SelectNameRespi!=='ice'){
+//   alert('oops go back & search with proper name')
+// }
 
   if (selectStatus==='loading') {
 

@@ -47,7 +47,7 @@ align-self: center;
 }
 
 .RecipesChild button:nth-child(1){
-    background-color: red;
+    background-color: rgb(56, 92, 236);
     border:  none;
     position: relative;
     /* right: 10px; */
@@ -66,8 +66,9 @@ cursor: pointer;
 
 .RecipesChild button:nth-child(2){
 
-    background-color: black;
+    background-color: rgb(248, 95, 95);
     color: white;
+    border: none;
 
 
 
