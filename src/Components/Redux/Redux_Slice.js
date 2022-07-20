@@ -43,6 +43,15 @@ export const RecipeSlice=createSlice({
        
         
         ,
+        recipeupdate:(state,action)=>{
+   let r=[...state.data]
+       r.map((val,ind)=>{
+        if(val.id===action.payload.id){
+            val.input=action.payload.upinp
+        }
+       })
+       state.data=r;
+        },
         namesadd:(state,action)=>{
             state.names=action.payload
         }
@@ -50,7 +59,7 @@ export const RecipeSlice=createSlice({
 
 })
 
-export const {recipeadd,namesadd,recidelete}=RecipeSlice.actions;
+export const {recipeadd,namesadd,recidelete,recipeupdate}=RecipeSlice.actions;
 
 export const Selectrecipe=(state)=>state.datas.data;
 export const SelectName=(state)=>state.name.names

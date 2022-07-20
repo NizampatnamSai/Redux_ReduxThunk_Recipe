@@ -10,6 +10,7 @@
     align-self: center;
     font-size: large;
     border-radius: 15px;
+    z-index: 1;
 }
 
 .TodoDatas_inside button:hover{
@@ -39,9 +40,31 @@
     position: relative;
     bottom: 50px;
     left: 340px;
-
+    
     border-radius: 5px;
     color: lightcoral;
+
+}
+.TodoDatas_recipeUpdate {
+    position: relative;
+    /* bottom: 50px; */
+    left: 340px;
+    bottom: 50px;
+
+    /* background-color: red; */
+    margin-top: 2px;
+    border-radius: 5px;
+    color: rgb(4, 195, 4);
+
+
+}
+
+
+.TodoDatas_recipeUpdate:hover {
+
+    cursor: pointer;
+    /* margin-top: 2px; */
+
 
 }
 
@@ -55,6 +78,10 @@
 .TodoDatas_recipedelete {
 
     left: 145%;
+}
+.TodoDatas_recipeUpdate {
+    left: 145%;
+
 }
 
 }
@@ -74,6 +101,10 @@
     
         left: 80%;
     }
+    .TodoDatas_recipeUpdate {
+        left: 80%;
+    
+    }
     
     }
   
@@ -89,6 +120,10 @@
         
             left: 50%;
         }
+        .TodoDatas_recipeUpdate {
+            left: 50%;
+        
+        }
         
         }
 
@@ -102,6 +137,10 @@
             .TodoDatas_recipedelete {
             
                 left: 25%;
+            }
+            .TodoDatas_recipeUpdate {
+                left: 25%;
+            
             }
             
             }
@@ -155,3 +194,33 @@ font-size: 15px;
 }
 
 /* .TodoDatas_recipebtn */
+
+.TodoDatas_inside input{
+    outline: none;
+    border: none;
+    height: 25px;
+    align-self: center;
+    position: relative;
+    /* left: 10px; */
+    right: 100px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+/* .TodoDatas_inside div:nth-child(2) button{
+    align-self: center;
+    background-color: red !important;
+} */
+
+.Tododatas_btnupdate {
+    position: relative;
+    bottom: 100px;
+    left: 250px;
+    width: fit-content;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    background-color: red;
+    color: white;
+}

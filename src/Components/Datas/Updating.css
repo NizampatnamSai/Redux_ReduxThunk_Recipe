@@ -1,0 +1,11 @@
+.Updating {
+    width: 100%;
+}
+
+
+.Updating_inside {
+    display: flex;
+    /* flex-direction: ; */
+    justify-content: space-between;
+    width: 450px;
+}

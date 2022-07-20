@@ -1,12 +1,14 @@
 
-.todoData {
-}
+/* .todoData {
+} */
 
 .todoData_ul {
     background-color: salmon;
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: fit-content;
+    max-height: 70px;
+    
 
 }
 

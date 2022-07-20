@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { getrecipe, selectThunkRcipe } from '../Redux/ReduxThunkSlice'
 import './TodoDatas.css'
 import { useDispatch,useSelector } from 'react-redux'
-import { namesadd, recidelete } from '../Redux/Redux_Slice'
+import { namesadd, recidelete,recipeupdate } from '../Redux/Redux_Slice'
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 
 
 const TodoDatas = ({data}) => {
+  let {id}=data;
     let [dis,setDis]=useState(false)
+    let [inpdis,setinpdis]=useState(false)
+    let [upinp,setUpinp]=useState(`${data.input}`)
 
     let dispatch=useDispatch()
     let selectrecipe=useSelector(selectThunkRcipe)
@@ -43,10 +46,6 @@ const TodoDatas = ({data}) => {
     }
 
 
-    // let ar=[1,2,3,74]
-    // ar.reduce((a,b)=>{
-    //     console.log(a,b)
-    // })
 
 
 
@@ -57,6 +56,20 @@ let handledelete=()=>[
     )
 ]
 
+
+
+let handleupdate=()=>{
+  setinpdis(true)
+
+}
+
+let handleChangeup=(e)=>{
+  setUpinp(e.target.value)
+}
+
+let handleUpdateRedux=()=>{
+  dispatch(recipeupdate({id,upinp}))
+}
   return (
 
  
@@ -73,18 +86,29 @@ let handledelete=()=>[
 
             <div className='TodoDatas_inside'>
                 <div>  <p>{data?.input}</p></div>
+                {inpdis && dis &&
+                <input value={upinp}  onChange={handleChangeup}/> 
+                }
+
+                
                 <div><button className='TodoDatas_inside_btn' onBlur={handlenoclk} onClick={handleclick}> :</button></div> </div> 
 
 
                 {dis?<div className='TodoData_btn_inside'> <button className='TodoDatas_recipebtn' onClick={handleSearch}>
                     <Link to={`${data?.input}`} > Search {data?.input} Reciepe </Link>
                      </button>
+                    
                      <button  onClick={handledelete}
                       className='TodoDatas_recipedelete'>Delete {data?.input}</button>
+                      
+                      
+                      <button className='TodoDatas_recipeUpdate'  
+                     onClick={handleupdate} >Update</button>
+                     {inpdis && <button className='Tododatas_btnupdate'
+                     onClick={handleUpdateRedux}>Update</button>}
                     </div> :null}
   
-                
-          {/* {selectrecipe? <div>
+{/* {selectrecipe? <div>
             {selectrecipe.hits?.map((item)=>{return(
                 <div key={Math.random()} className='recipes'>
                   <div className='recipes_inside'>

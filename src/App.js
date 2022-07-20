@@ -77,6 +77,14 @@ useEffect(()=>{
 
 // console.log(as,d)
 
+// let as=[1,5,7,8,9]
+// let ns=as.map((val,ind)=>{
+//   if(val===5){
+//     as[ind]=10;
+//   }
+// })
+// console.log(as,ns)
+
   return (
     <div className={ SelectNameRespi ?'':'App' }>
       
