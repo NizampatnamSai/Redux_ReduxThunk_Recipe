@@ -7,11 +7,20 @@
     display: flex;
     justify-content: space-between;
     height: fit-content;
-    max-height: 75px;
+    /* max-height: 75px; */
     height: 70px;
     
 
 }
+
+@media (max-width:530px){
+  .todoData_ul {
+    height: 95px;
+  
+  }
+
+}
+
 
 .todoData_ul li {
    list-style:none;
