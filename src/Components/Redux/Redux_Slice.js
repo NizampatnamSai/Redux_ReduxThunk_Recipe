@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+// import { act } from "react-dom/test-utils";
 let r=[];
 export const RecipeSlice=createSlice({
     name:'recipe',
     initialState:{
         data:[],
-        names:''
+        names:'',
+        upid:null,
+        local_data:[],
     },
 
     reducers:{
@@ -54,14 +57,29 @@ export const RecipeSlice=createSlice({
         },
         namesadd:(state,action)=>{
             state.names=action.payload
+        },
+        localdata:(state,action)=>{
+            state.local_data=action.payload;
+        },
+        deletelocal:(state,action)=>{
+            let dar=[...state.local_data]
+            dar.map((item,indx)=>{
+                if(item.id===action.payload){
+                    state.local_data.splice(indx,1)
+
+                }
+            })
+            state.upid=action.payload
         }
     }
 
 })
 
-export const {recipeadd,namesadd,recidelete,recipeupdate}=RecipeSlice.actions;
+export const {recipeadd,namesadd,recidelete,recipeupdate,deletelocal,localdata}=RecipeSlice.actions;
 
 export const Selectrecipe=(state)=>state.datas.data;
 export const SelectName=(state)=>state.name.names
+export const SelectId=(state)=>state.ID.upid
+export const SelectLocalData=(state)=>state.ldata.local_data
 
 export default RecipeSlice.reducer

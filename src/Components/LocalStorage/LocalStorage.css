@@ -1,0 +1,80 @@
+.LocalStorage {
+    background-color: salmon;
+    width: 50%;
+   min-height: 60%;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+}
+
+.LocalStorage_Inside {
+    width: 500px;
+    max-width: 90%;
+    background-color: lightgreen;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  /* justify-content: center; */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.LocalStorage_Inside div:nth-child(1) {
+    /* justify-self: center; */
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+.LocalStorage_Inside div:nth-last-child(1) {
+    color: red;
+    background-color: white;
+    height: 30px;
+}
+.LocalStorage_main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 3px;
+    padding-right: 4px;
+}
+
+.LocalStorage_main input{
+    border: none;
+    outline: none;
+}
+
+.LocalStorage_main button {
+    border-radius: 5px;
+    border: none;
+    background-color: aqua;
+    /* color: white; */
+    /* padding-right: 15px; */
+    margin-right: 10px;
+    height: 25px;
+    width: 45px;
+}
+
+.LocalStorage_btn_add:hover{
+cursor: pointer;
+}
+
+.LocalStorage_data {
+    background-color: white;
+    width: 500px;
+    max-width: 90%;
+    margin-top: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}

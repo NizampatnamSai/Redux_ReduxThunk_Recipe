@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './Components/Redux/Redux_Store';
+// import {Reduxindex} from '../src/Components/Normal_Redux/Reduxindex'
+import Reduxindex from './Components/Normal_Redux/Reduxindex'
+
 import {BrowserRouter as Router, Route, Link, Routes, useNavigate} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
+    <Provider store={Reduxindex}>
       <Router>
     <App />
     </Router>

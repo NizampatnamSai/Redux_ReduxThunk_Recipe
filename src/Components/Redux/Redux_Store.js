@@ -9,7 +9,9 @@ export const store=configureStore({
      datas:recipereducer,
      statuss: reciepeReducer,
      reciepe: reciepeReducer,
-     name:recipereducer
+     name:recipereducer,
+     ID:recipereducer,
+     ldata:recipereducer,
     }
 })
 
