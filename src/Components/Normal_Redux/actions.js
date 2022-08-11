@@ -9,12 +9,13 @@ export const addTodo=(content)=> {
     return {
     type:Add_ToDO,
     payload:{
-        id:++idnum,
+        // id:++idnum,
         content
     }}
 }
 
 export const deleteTodo=(id)=>{
+    // alert(id)
     return{
     type:Delete_Todo,
     payload:{id}}
